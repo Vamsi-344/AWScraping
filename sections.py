@@ -5,7 +5,7 @@ import pandas as pd
 import datetime
 import os
 import time
-from utils import get_content
+from article_content import get_content
 
 options = Options()
 options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
@@ -13,7 +13,7 @@ options.headless=True
 
 def get_page(page_value):
 	website = "https://www.thehindu.com/todays-paper/"
-	path = r"C:\Users\sethu\Downloads\geckodriver-v0.32.0-win32\geckodriver.exe"
+	path = r"./geckodriver.exe"
 
 	service = Service(executable_path=path)
 	driver = webdriver.Firefox(options=options, service=service)

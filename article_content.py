@@ -14,7 +14,7 @@ options.headless=True
 
 def get_content(website):
 	p_content = ""
-	path = r"C:\Users\sethu\Downloads\geckodriver-v0.32.0-win32\geckodriver.exe"
+	path = r"./geckodriver.exe"
 
 	service = Service(executable_path=path)
 	driver = webdriver.Firefox(options=options, service=service)
@@ -28,5 +28,3 @@ def get_content(website):
 	driver.quit()
 
 	return p_content
-
-# print(get_content("https://www.thehindu.com/todays-paper/2022-12-05/th_chennai/articleGVDAJHKH1-1440237.ece"))
